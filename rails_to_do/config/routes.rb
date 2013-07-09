@@ -5,6 +5,9 @@ RailsToDo::Application.routes.draw do
   post '/todos' => 'todos#create'
 
   get '/todos/:id' => 'todos#show'
+
+  get '/todos/:id/edit' => 'todos#edit'
+  post '/todos/:id' => 'todos#edit'
 end
 
 

@@ -12,16 +12,20 @@ class TodosController < ApplicationController
     task.description = params[:description]
     task.due_date = params[:due_date]
     task.urgent = params[:urgent]
-    if urgency == "on"
-      urgency = true
+    if task.urgent == "on"
+      task.urgent = true
     else
-      urgency = false
+      task.urgent = false
     end
     task.save
     redirect_to '/todos'
   end
 
   def show
+    @task = Task.find(params[:id])
+  end
+
+  def edit
     @task = Task.find(params[:id])
   end
 end

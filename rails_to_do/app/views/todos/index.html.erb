@@ -5,7 +5,7 @@ index todo - list all tasks
 <ul>
   <% @tasks.each do |task| %>
     <li>
-      <a href="/tasks/<%= task.id %>">
+      <a href="/todos/<%= task.id %>">
         <%= task.name %> <%= task.urgent %>
       </a>
     </li>
