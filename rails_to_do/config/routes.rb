@@ -8,6 +8,7 @@ RailsToDo::Application.routes.draw do
 
   get '/todos/:id/edit' => 'todos#edit'
   post '/todos/:id' => 'todos#edit'
+  put '/todos/:id' => 'todos#update'
 end
 
 
