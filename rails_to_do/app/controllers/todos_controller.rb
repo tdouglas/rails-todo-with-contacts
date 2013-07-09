@@ -20,4 +20,8 @@ class TodosController < ApplicationController
     task.save
     redirect_to '/todos'
   end
+
+  def show
+
+  end
 end
